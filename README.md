@@ -10,6 +10,8 @@ or wanted to trigger all of my reducers every time I pressed a key.
 I came up with my own little implementation that was really simple, and I figured I might want to use it
 in the future. Hence, react-redux-chloroform was born.
 
+Current only supports **type**s of "text".
+
 ```javascript
 import React from 'react';
 import Form from '@jordin/react-redux-chloroform';
@@ -25,12 +27,13 @@ const fieldData = [
   }
 ]
 
-// formData will be a JSON object representing the data from the form. for example:
+// This action creator will be called and dispatched when the form is submitted.
+// formData will be a JSON object representing the values of the form fields at
+// the time of submission:
 // {
 //   Username: 'admin',
 //   Password: '123' 
 // }
-// This action creator will be called and dispatched when the form is submitted.
 const actionCreator = formData => { type: 'LOGIN_ATTEMPT', formData }
 
 class App extends React.Component {
