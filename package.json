@@ -1,0 +1,38 @@
+{
+  "name": "@jordin/redux-chloroform",
+  "version": "1.0.0",
+  "description": "Put your react-redux form problems to sleep!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev" : "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azjgard/react-redux-chloroform.git"
+  },
+  "author": "Jordin Gardner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azjgard/react-redux-chloroform/issues"
+  },
+  "homepage": "https://github.com/azjgard/react-redux-chloroform#readme",
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0-beta.55",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "react": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  }
+}
