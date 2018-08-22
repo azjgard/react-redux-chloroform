@@ -11,8 +11,6 @@ or wanted to trigger all of my reducers every time I pressed a key.
 I came up with my own little implementation that was really simple, and I figured I might want to use it
 in the future. Hence, react-redux-chloroform was born.
 
-Current only supports **type**s of "text".
-
 ```javascript
 import React from 'react';
 import Form from '@jordin/react-redux-chloroform';
@@ -51,11 +49,11 @@ The root component that is required to generate the form itself.
 #### Props
 
 * Required
-  > * **action** : an action creator - will be passed the data from the form
+  > * **action** - an action creator - will be passed the data from the form
   >   submission as its only argument. form will still function without it,
   >   but nothing will ever be dispatched to your redux store.
 * Optional
-  > * **submitButtonText** : text to show on the form's submit button. Default
+  > * **submitButtonText** - text to show on the form's submit button. Default
   >   is "Submit" (surprise)
 
 ### Field
@@ -63,8 +61,8 @@ The root component that is required to generate the form itself.
 #### Props
 
 * Required
-  > * **name** : a name for the field that is unique from the names of any other Fields that are being used for the same Form.
+  > * **name** - a name for the field that is unique from the names of any other Fields that are being used for the same Form.
 * Optional
-  > * **type** : currently only supports "text" or "password". obviously, "text" is the default.
+  > * **type** - currently only supports "text" or "password". obviously, "text" is the default.
 
 There are probably about a million and one things that I could add to this to make it more flexible, so we'll see what my time permits. Feel free to open up a PR.
