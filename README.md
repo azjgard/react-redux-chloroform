@@ -1,4 +1,5 @@
 # React Redux Chloroform
+
 ### Put your react-redux form problems to sleep!
 
 Can you even think of a cheesier catchphrase?
@@ -16,35 +17,54 @@ Current only supports **type**s of "text".
 import React from 'react';
 import Form from '@jordin/react-redux-chloroform';
 
-const fieldData = [
-  {
-    type: 'text',
-    name: 'Username'
-  },
-  {
-    type: 'text',
-    name: 'Password'
-  }
-]
-
-// This action creator will be called and dispatched when the form is submitted.
-// formData will be a JSON object representing the values of the form fields at
-// the time of submission:
-// {
-//   Username: 'admin',
-//   Password: '123' 
-// }
-const actionCreator = formData => { type: 'LOGIN_ATTEMPT', formData }
+// This action creator will be called and dispatched
+// when the form is submitted. The argument passed to it
+// will be a JSON object representing the values of the
+// form fields at the time of submission.
+//
+// In the data object, the keys are determined according
+// to the "name" prop passed to each field.
+const actionCreator = data => {
+  type: 'LOGIN_ATTEMPT', data;
+};
 
 class App extends React.Component {
   render() {
     return (
-      <Form fields={fieldData} action={actionCreator} />
-    )
+      <Form action={actionCreator}>
+        <Field type="text" name="Username" />
+        <Field type="password" name="Password" />
+      </Form>
+    );
   }
 }
 
 export default App;
 ```
+
+## Components
+
+### Form
+
+The root component that is required to generate the form itself.
+
+#### Props
+
+* Required
+  > * **action** : an action creator - will be passed the data from the form
+  >   submission as its only argument. form will still function without it,
+  >   but nothing will ever be dispatched to your redux store.
+* Optional
+  > * **submitButtonText** : text to show on the form's submit button. Default
+  >   is "Submit" (surprise)
+
+### Field
+
+#### Props
+
+* Required
+  > * **name** : a name for the field that is unique from the names of any other Fields that are being used for the same Form.
+* Optional
+  > * **type** : currently only supports "text" or "password". obviously, "text" is the default.
 
 There are probably about a million and one things that I could add to this to make it more flexible, so we'll see what my time permits. Feel free to open up a PR.
