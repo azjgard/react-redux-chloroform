@@ -1,3 +1,4 @@
-import FormContainer from "./Form/FormContainer";
+import Form from './Form/FormContainer';
+import Field from './Field/Field';
 
-export default FormContainer;
+export {Form, Field};

@@ -1,3 +1,3 @@
-import Form from "./dist";
+import {Form, Field} from './dist';
 
-export default Form;
+export {Form, Field};
