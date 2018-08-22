@@ -13,7 +13,7 @@ in the future. Hence, react-redux-chloroform was born.
 
 ```javascript
 import React from 'react';
-import Form from '@jordin/react-redux-chloroform';
+import {Form, Field} from '@jordin/react-redux-chloroform';
 
 // This action creator will be called and dispatched
 // when the form is submitted. The argument passed to it
