@@ -68,4 +68,12 @@ The root component that is required to generate the form itself.
 * Optional
   > * **type** - currently only supports "text" or "password". obviously, "text" is the default.
 
+#### Ideas TODO
+
+* Add Field validation
+* Add Form validation
+* Add support for other types
+* Add support for select boxes
+* Remove styling by default, but maybe toss in some enable-able themes?
+
 There are probably about a million and one things that I could add to this to make it more flexible, so we'll see what my time permits. Feel free to open up a PR.
