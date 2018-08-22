@@ -23,7 +23,10 @@ import Form from '@jordin/react-redux-chloroform';
 // In the data object, the keys are determined according
 // to the "name" prop passed to each field.
 const actionCreator = data => {
-  type: 'LOGIN_ATTEMPT', data;
+  type: 'LOGIN_ATTEMPT', formData: {
+    username: data.Username,
+    password: data.Password
+  };
 };
 
 class App extends React.Component {
