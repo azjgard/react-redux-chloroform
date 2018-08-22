@@ -5,7 +5,7 @@ class Field extends React.Component {
     return (
       <div>
         <input
-          type="text"
+          type={this.props.type || 'text'}
           onChange={this.props.onChange}
           placeholder={this.props.name}
         />
